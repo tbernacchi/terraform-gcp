@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-application
+  name: my-application
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-application
+  template:
+    metadata: 
+      labels: 
+        app: my-application
+    spec:
+      initContainers:
+      - name: updatedb
+        image: index.docker.io/tadeuuuuu/servian:1.0
+        command: ['sh', '-c', "until ./TechChallengeApp updatedb --skip-create-db; do echo updating db...; sleep 5; done"]
+      containers:
+      - name: my-application
+        image: index.docker.io/tadeuuuuu/servian:1.0
+        imagePullPolicy: IfNotPresent
+        ports: 
+        - containerPort: 3000
+      imagePullSecrets:
+      - name: regcred
