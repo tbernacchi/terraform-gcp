@@ -39,7 +39,7 @@ Examples:
 * [service-networking](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started);
 * [compute-engine-api](https://cloud.google.com/compute/docs/reference/rest/v1);
 
-## Initial setup
+## Initial setup GCP
 
 ```bash
 gcloud auth login
