@@ -30,7 +30,7 @@ The `.yaml` files to deploy the application on [GKE](https://cloud.google.com/ku
 
 ## Usage
 
-Before you deploy your `terraform` you've to make sure you have all the necessary permissions of these components on GCP. 
+Before you deploy your `terraform` you've to make sure you have all the necessary permissions of these components on GCP: 
 
 Examples:
 
@@ -39,6 +39,7 @@ Examples:
 * [service-networking](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started);
 * [compute-engine-api](https://cloud.google.com/compute/docs/reference/rest/v1);
 
+##Initial setup
 
 ```bash
 gcloud auth login
