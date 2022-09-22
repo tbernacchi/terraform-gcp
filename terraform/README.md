@@ -12,11 +12,10 @@
 
 # Requirements 
 
-* VPC;
-* network;
+* [VPC](https://cloud.google.com/vpc/);
+* [network](https://cloud.google.com/vpc/docs/create-modify-vpc-networks);
 
-This project does not include the creation of a VPC and a new network. You've to set yours on `variables.tf`.
-
+This project does not include the creation of a VPC and a new network. You've to setup the existing ones on `variables.tf`.
 
 ## Table of Contents
 
