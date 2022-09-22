@@ -14,4 +14,4 @@ terraform apply "plan"
 ```
 After a couple of minutes you'll have a HA PostgreSQL database deployed on your GCP VPC network.
 
-Take note of the IP address the output will print on the screen, we're going to use that IP address on the `conf.toml` file.
+Take note of all the sensitive information that will print on the screen, we're going to use those on the `conf.toml` file.
