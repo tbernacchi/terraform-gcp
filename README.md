@@ -1,4 +1,4 @@
-# Infra-todo-go-app
+# Infra-todo-go-app GCP
 Infra to deploy a simple GTD Golang application that is backed by a Postgres database.
 
 # Instructions
