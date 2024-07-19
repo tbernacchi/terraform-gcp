@@ -1,5 +1,5 @@
-# Infra-todo-go-app GCP
-Infra to deploy a simple GTD Golang application that is backed by a Postgres database.
+# Terraform GCP
+Infra to deploy a simple Golang application on GKE that is backed by a Postgres database.
 
 # Instructions
 
