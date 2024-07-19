@@ -1,4 +1,4 @@
-# Terraform GCP
+# terraform-gcp
 Infra to deploy a simple Golang application on GKE that is backed by a Postgres database.
 
 # Instructions
