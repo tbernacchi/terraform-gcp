@@ -13,16 +13,7 @@ This project contains three directories:
 
 - app - It's the application itself. Read the `readme.md`.
 - k8s - kubernetes manifests to deploy the application;
-- terraform - `.tf` files to deploy the GKE cluster and the PostgreSQL database; 
-
-## terraform
-
-It consists in a [HA Postgresql](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance) and a [GKE cluster](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster).
-
-## k8s 
-
-The `.yaml` files to deploy the application on [GKE](https://cloud.google.com/kubernetes-engine).
-
+- terraform - `.tf` files to deploy the [GKE cluster](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster) and the [PostgreSQL database](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance); 
 
 ## Requirements
 
@@ -35,7 +26,7 @@ The `.yaml` files to deploy the application on [GKE](https://cloud.google.com/ku
 
 ## GCP
 
-Before you deploy your `terraform` you've to make sure you have all the necessary permissions of these components on GCP: 
+Before you deploy your `terraform` you've to make sure you have all the necessary permissions:
 
 Examples:
 

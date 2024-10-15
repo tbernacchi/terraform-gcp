@@ -1,4 +1,4 @@
-<h1 align="">Terraform GCP 👋</h1>
+<h1 align="">terraform</h1>
 <p>
 </p>
 
