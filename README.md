@@ -1,18 +1,23 @@
 # terraform-gcp-gke-postgresql
-Infra to deploy a simple Golang application on GKE that is backed by a Postgres database.
+> Infra to deploy a GKE kubernetes cluster on GCP plus a HA Postgres database.
 
-# Instructions
+![Terraform](/.github/assets/img/terraform-logo.png)
 
-This project contains three directories for the GTD Golang app on [GCP](https://cloud.google.com).
+<div align=>
+	<img align="center" width="200px" src=/.github/assets/img/google-cloud-logo.png>
+</div>
 
+## Instructions
 
-## app
+This project contains three directories:
 
-It's the application itself. Read the `readme.md`.
+- app - It's the application itself. Read the `readme.md`.
+- k8s - kubernetes manifests to deploy the application;
+- terraform - `.tf` files to deploy the GKE cluster and the PostgreSQL database; 
 
 ## terraform
 
-To deploy the necessary infra. It consists of a [HA Postgresql](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance) plus a [GKE](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster) cluster.
+It consists in a [HA Postgresql](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance) and a [GKE cluster](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster).
 
 ## k8s 
 
@@ -28,7 +33,7 @@ The `.yaml` files to deploy the application on [GKE](https://cloud.google.com/ku
 * kubectl;
 
 
-## Usage
+## GCP
 
 Before you deploy your `terraform` you've to make sure you have all the necessary permissions of these components on GCP: 
 
@@ -39,33 +44,18 @@ Examples:
 * [service-networking](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started);
 * [compute-engine-api](https://cloud.google.com/compute/docs/reference/rest/v1);
 
-## Initial setup GCP
+## setup 
 
 ```bash
 gcloud auth login
-```
-
-```bash
 gcloud projects list
-```
-
-```bash
 gcloud config set project <my-project>
-```
-
-```bash
 gcloud auth application-default login
-```
-
-```bash
 gcloud iam service-accounts create sa-terraform — display-name
-```
-
-```bash
 gcloud projects add-iam-policy-binding PROJECT_ID — member="serviceAccount:sa-terraform@PROJECT_ID.iam.gserviceaccount.com" — role="roles/cloudsql.admin"
 ```
 
-# References
+## References
 https://cloud.google.com/iam/docs/service-accounts
 https://cloud.google.com/sql/docs/postgres/admin-api
 https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started
