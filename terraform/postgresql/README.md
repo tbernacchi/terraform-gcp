@@ -1,4 +1,4 @@
-# HA PostgreSQL database.
+# PostgreSQL
 
 This repo is a hand's on demonstration of the resource [google_sql_database_instance](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance) from Terraform documentation containing configuration files to provision an HA PostgreSQL database on GCP.
 
